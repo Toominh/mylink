@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sen link</title>
+    <title>MyLink</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* CSS - Darkmode & Biến cục bộ */
@@ -67,22 +67,28 @@
         .btn-icon { background-color: #333; color: white; padding: 10px; }
 
         /* Grid hiển thị Thư mục */
-        .folders-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
-        }
+/* Masonry Layout hiển thị Thư mục */
+    .folders-grid {
+        column-width: 320px; /* Tự động chia cột với độ rộng tối thiểu 320px */
+        column-gap: 20px;    /* Khoảng cách ngang giữa các cột */
+    }
 
-        .folder-box {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            cursor: grab;
-            display: flex;
-            flex-direction: column;
-            transition: border-color 0.2s;
-            overflow: hidden;
-        }
+    .folder-box {
+        background-color: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        cursor: grab;
+        display: flex;
+        flex-direction: column;
+        transition: border-color 0.2s;
+        overflow: hidden;
+        
+        /* Cập nhật thêm các thuộc tính này */
+        break-inside: avoid;      /* Ngăn hộp bị cắt đứt gãy giữa 2 cột */
+        page-break-inside: avoid; /* Hỗ trợ các trình duyệt cũ hơn */
+        margin-bottom: 20px;      /* Khoảng cách dọc giữa các hộp */
+    }
+
         .folder-box-content { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; }
         .folder-box:active { cursor: grabbing; }
         .folder-box.drag-over { border: 2px dashed var(--primary-color); opacity: 0.7; }
@@ -155,7 +161,7 @@
 <body>
 
 <div class="container">
-       <div class="folders-grid" id="foldersContainer"></div>
+    <div class="folders-grid" id="foldersContainer"></div>
 
     <div class="header-controls">
         <div class="input-group">
@@ -170,7 +176,12 @@
                 <span id="fontSizeDisplay" style="font-weight: bold; min-width: 20px; text-align: center;">22</span>
                 <button class="btn-mini" onclick="changeFontSize(1)"><i class="fas fa-plus"></i></button>
             </div>
-
+<button class="btn-outline" onclick="expandAll()" title="Mở rộng tất cả các thư mục">
+                <i class="fas fa-expand-arrows-alt"></i> Mở
+            </button>
+            <button class="btn-outline" onclick="collapseAll()" title="Thu gọn tất cả các thư mục">
+                <i class="fas fa-compress-arrows-alt"></i> Thu
+            </button>
             <input type="file" id="importFile" accept=".json" onchange="handleImport(event)">
             <button class="btn-outline" onclick="triggerImport()" title="Nhập dữ liệu từ file JSON">
                 <i class="fas fa-upload"></i> Import Data
@@ -491,7 +502,21 @@ var INITIAL_FONT_SIZE = 22;
             container.appendChild(box);
         });
     }
+function expandAll() {
+        // Duyệt qua tất cả thư mục và đặt trạng thái isCollapsed thành false (Mở)
+        folders.forEach(folder => {
+            folder.isCollapsed = false;
+        });
+        saveAndRender(); // Lưu và cập nhật lại giao diện
+    }
 
+    function collapseAll() {
+        // Duyệt qua tất cả thư mục và đặt trạng thái isCollapsed thành true (Đóng)
+        folders.forEach(folder => {
+            folder.isCollapsed = true;
+        });
+        saveAndRender(); // Lưu và cập nhật lại giao diện
+    }
     init();
 </script>
 </body>
