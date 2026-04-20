@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager Pro - v2.1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS - Darkmode & Biến cục bộ */
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --primary-color: #bb86fc;
+            --secondary-color: #03dac6;
+            --danger-color: #cf6679;
+            --border-color: #333333;
+            --link-color: #90caf9;
+            --link-font-size: 22px; 
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 20px;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; }
+        h1 { text-align: center; color: var(--primary-color); margin-bottom: 30px; }
+
+        /* Khu vực Header / Control - Nằm ở chân trang */
+        .header-controls {
+            background-color: var(--surface-color);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+
+        .input-group { display: flex; gap: 10px; align-items: center; flex: 1; min-width: 300px; }
+        .action-group { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+        input[type="text"] {
+            padding: 10px; border-radius: 6px; border: 1px solid var(--border-color);
+            background-color: #2c2c2c; color: var(--text-color); flex: 1; font-size: 14px;
+        }
+
+        button {
+            padding: 10px 15px; border-radius: 6px; border: none; cursor: pointer;
+            font-weight: bold; font-size: 13px; transition: all 0.2s;
+            display: flex; align-items: center; gap: 8px;
+        }
+        button:hover { opacity: 0.8; transform: translateY(-1px); }
+        
+        .btn-primary { background-color: var(--primary-color); color: #000; }
+        .btn-secondary { background-color: var(--secondary-color); color: #000; }
+        .btn-outline { background-color: transparent; border: 1px solid var(--border-color); color: var(--text-color); }
+        .btn-icon { background-color: #333; color: white; padding: 10px; }
+
+        /* Grid hiển thị Thư mục */
+        .folders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .folder-box {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            cursor: grab;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s;
+            overflow: hidden;
+        }
+        .folder-box-content { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; }
+        .folder-box:active { cursor: grabbing; }
+        .folder-box.drag-over { border: 2px dashed var(--primary-color); opacity: 0.7; }
+
+        .folder-header {
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 18px; font-weight: bold; 
+            padding: 15px; 
+            border-bottom: 1px solid var(--border-color); 
+        }
+        
+        .folder-title { display: flex; align-items: center; gap: 10px; flex: 1; }
+        .folder-title i { transition: transform 0.2s; cursor: pointer; color: var(--primary-color); }
+        .folder-title i:hover { transform: scale(1.2); }
+        
+        .folder-actions { display: flex; gap: 10px; align-items: center; }
+        
+        .btn-mini {
+            background: none; border: none; color: var(--text-color); cursor: pointer;
+            font-size: 16px; padding: 5px; transition: color 0.2s;
+        }
+        .btn-mini:hover { color: var(--primary-color); }
+        .btn-add-link { color: var(--secondary-color); }
+
+        .folder-box.collapsed .links-list { display: none; }
+        .folder-box.collapsed .fa-chevron-up { transform: rotate(180deg); }
+
+        /* Danh sách Link */
+        .links-list { list-style: none; padding: 0; margin: 15px 0 0 0; flex-grow: 1; min-height: 20px; }
+        .links-list li {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 8px; border-radius: 6px; margin-bottom: 5px; background-color: #252525;
+            cursor: grab; transition: border 0.1s;
+        }
+        .links-list li:active { cursor: grabbing; }
+        .links-list li:hover { background-color: #2c2c2c; }
+
+        .links-list a {
+            color: var(--link-color); text-decoration: none; display: flex; align-items: center; gap: 10px;
+            font-size: var(--link-font-size); 
+            word-break: break-word; flex: 1;
+        }
+        .links-list a:hover { text-decoration: underline; }
+        
+        .link-icon { color: var(--secondary-color); font-size: 16px; cursor: pointer; transition: transform 0.2s; }
+        .link-icon:hover { transform: scale(1.3); color: #fff; }
+
+        .btn-delete { color: var(--danger-color); }
+
+        /* Modals */
+        .modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 1000;
+        }
+        .modal-content {
+            background: var(--surface-color); padding: 25px; border-radius: 10px;
+            width: 90%; max-width: 400px; border: 1px solid var(--border-color);
+        }
+        .modal-content h3 { margin-top: 0; color: var(--secondary-color); }
+        .modal-content input { width: 100%; margin-bottom: 15px; }
+        .modal-content label { display: block; margin-bottom: 5px; font-size: 14px; color: #aaa; }
+        .modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+        
+        input[type="color"] { width: 60px; height: 35px; padding: 2px; cursor: pointer; background: none; border: 1px solid #444; }
+
+        /* Tiện ích ẩn */
+        #importFile { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1><i class="fas fa-link"></i> Bookmark Manager Pro</h1>
+
+    <div class="folders-grid" id="foldersContainer"></div>
+
+    <div class="header-controls">
+        <div class="input-group">
+            <input type="text" id="newFolderName" placeholder="Tên thư mục mới..." onkeypress="if(event.key === 'Enter') addFolder()">
+            <button class="btn-primary" onclick="addFolder()"><i class="fas fa-folder-plus"></i> Tạo Thư Mục</button>
+        </div>
+        
+        <div class="action-group">
+            <div style="display: flex; align-items: center; gap: 5px; background: #333; padding: 2px 10px; border-radius: 6px; margin-right: 10px;">
+                <span style="font-size: 12px; color: #888;">Font:</span>
+                <button class="btn-mini" onclick="changeFontSize(-1)"><i class="fas fa-minus"></i></button>
+                <span id="fontSizeDisplay" style="font-weight: bold; min-width: 20px; text-align: center;">22</span>
+                <button class="btn-mini" onclick="changeFontSize(1)"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <input type="file" id="importFile" accept=".json" onchange="handleImport(event)">
+            <button class="btn-outline" onclick="triggerImport()" title="Nhập dữ liệu từ file JSON">
+                <i class="fas fa-upload"></i> Import Data
+            </button>
+            <button class="btn-outline" onclick="exportData()" title="Xuất dữ liệu ra file JSON">
+                <i class="fas fa-file-code"></i> Export Data
+            </button>
+
+            <button class="btn-secondary" onclick="exportHTML()">
+                <i class="fas fa-download"></i> Xuất file HTML
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="linkModal">
+    <div class="modal-content">
+        <h3><i class="fas fa-plus-circle"></i> Thêm Link</h3>
+        <input type="hidden" id="targetFolderId">
+        <input type="text" id="modalLinkName" placeholder="Tên trang web...">
+        <input type="text" id="modalLinkUrl" placeholder="Địa chỉ URL (VD: google.com)..." onkeypress="if(event.key === 'Enter') saveNewLink()">
+        <div class="modal-actions">
+            <button class="btn-outline" onclick="closeModal('linkModal')">Hủy</button>
+            <button class="btn-secondary" onclick="saveNewLink()">Thêm Ngay</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="editLinkModal">
+    <div class="modal-content">
+        <h3><i class="fas fa-edit"></i> Chỉnh Sửa Link</h3>
+        <input type="hidden" id="editFolderIndexTarget">
+        <input type="hidden" id="editLinkIdTarget">
+        <label>Tên hiển thị:</label>
+        <input type="text" id="editLinkName">
+        <label>Địa chỉ (URL):</label>
+        <input type="text" id="editLinkUrl" onkeypress="if(event.key === 'Enter') saveEditLink()">
+        <div class="modal-actions">
+            <button class="btn-outline" onclick="closeModal('editLinkModal')">Hủy</button>
+            <button class="btn-secondary" onclick="saveEditLink()">Cập Nhật</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="editFolderModal">
+    <div class="modal-content">
+        <h3><i class="fas fa-folder-open"></i> Sửa Thư Mục</h3>
+        <input type="hidden" id="editFolderIndex">
+        <label>Tên thư mục:</label>
+        <input type="text" id="editFolderName" onkeypress="if(event.key === 'Enter') saveEditFolder()">
+        <label>Màu nền tiêu đề:</label>
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 15px;">
+            <input type="color" id="editFolderColor">
+            <span style="font-size: 12px;">Click chọn màu</span>
+        </div>
+        <div class="modal-actions">
+            <button class="btn-outline" onclick="closeModal('editFolderModal')">Hủy</button>
+            <button class="btn-secondary" onclick="saveEditFolder()">Lưu Thay Đổi</button>
+        </div>
+    </div>
+</div>
+
+<script id="data-store">
+// --- DATA_START ---
+var INITIAL_DATA = [];
+var INITIAL_FONT_SIZE = 22;
+// --- DATA_END ---
+</script>
+
+<script>
+    // 1. STATE & KHỞI TẠO
+    let folders = (INITIAL_DATA && INITIAL_DATA.length > 0) ? INITIAL_DATA : (JSON.parse(localStorage.getItem('bm_folders')) || []);
+    let currentFontSize = parseInt(localStorage.getItem('bm_fontsize')) || INITIAL_FONT_SIZE || 22;
+    
+    let draggedType = null;
+    let draggedFolderIndex = null;
+    let draggedLinkInfo = null;
+
+    function init() {
+        applyFontSize();
+        render();
+    }
+
+    function saveAndRender() {
+        localStorage.setItem('bm_folders', JSON.stringify(folders));
+        localStorage.setItem('bm_fontsize', currentFontSize);
+        render();
+    }
+
+    // 2. THAO TÁC THƯ MỤC
+    function addFolder() {
+        const input = document.getElementById('newFolderName');
+        const name = input.value.trim();
+        if (!name) return;
+        folders.push({ id: 'f_' + Date.now(), name: name, isCollapsed: false, links: [], color: '#1e1e1e' });
+        input.value = '';
+        saveAndRender();
+    }
+
+    function toggleFolder(index) {
+        folders[index].isCollapsed = !folders[index].isCollapsed;
+        saveAndRender();
+    }
+
+    function deleteFolder(index) {
+        if(confirm(`Xóa thư mục "${folders[index].name}"?`)) {
+            folders.splice(index, 1);
+            saveAndRender();
+        }
+    }
+
+    function openEditFolder(index) {
+        document.getElementById('editFolderIndex').value = index;
+        document.getElementById('editFolderName').value = folders[index].name;
+        document.getElementById('editFolderColor').value = folders[index].color || '#1e1e1e';
+        document.getElementById('editFolderModal').style.display = 'flex';
+        document.getElementById('editFolderName').focus();
+    }
+
+    function saveEditFolder() {
+        const index = document.getElementById('editFolderIndex').value;
+        folders[index].name = document.getElementById('editFolderName').value.trim();
+        folders[index].color = document.getElementById('editFolderColor').value;
+        saveAndRender();
+        closeModal('editFolderModal');
+    }
+
+    // 3. THAO TÁC LINK
+    function openModal(folderId) {
+        document.getElementById('targetFolderId').value = folderId;
+        document.getElementById('modalLinkName').value = '';
+        document.getElementById('modalLinkUrl').value = '';
+        document.getElementById('linkModal').style.display = 'flex';
+    }
+
+    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+
+    function saveNewLink() {
+        const folderId = document.getElementById('targetFolderId').value;
+        const name = document.getElementById('modalLinkName').value.trim();
+        let url = document.getElementById('modalLinkUrl').value.trim();
+        if (!name || !url) return;
+        if (!url.startsWith('http')) url = 'https://' + url;
+
+        const folder = folders.find(f => f.id === folderId);
+        if (folder) {
+            folder.links.push({ id: 'l_' + Date.now(), name: name, url: url });
+            saveAndRender();
+            closeModal('linkModal');
+        }
+    }
+
+    function openEditLink(fIndex, lId) {
+        const link = folders[fIndex].links.find(l => l.id === lId);
+        document.getElementById('editFolderIndexTarget').value = fIndex;
+        document.getElementById('editLinkIdTarget').value = lId;
+        document.getElementById('editLinkName').value = link.name;
+        document.getElementById('editLinkUrl').value = link.url;
+        document.getElementById('editLinkModal').style.display = 'flex';
+    }
+
+    function saveEditLink() {
+        const fIdx = document.getElementById('editFolderIndexTarget').value;
+        const lId = document.getElementById('editLinkIdTarget').value;
+        const link = folders[fIdx].links.find(l => l.id === lId);
+        link.name = document.getElementById('editLinkName').value.trim();
+        link.url = document.getElementById('editLinkUrl').value.trim();
+        saveAndRender();
+        closeModal('editLinkModal');
+    }
+
+    function deleteLink(fIndex, lId) {
+        if(confirm("Xóa link này?")) {
+            folders[fIndex].links = folders[fIndex].links.filter(l => l.id !== lId);
+            saveAndRender();
+        }
+    }
+
+    // 4. IMPORT & EXPORT DỮ LIỆU
+    function exportData() {
+        const data = { folders: folders, currentFontSize: currentFontSize };
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `bookmarks_backup_${new Date().toLocaleDateString().replace(/\//g,'-')}.json`;
+        a.click();
+    }
+
+    function triggerImport() { document.getElementById('importFile').click(); }
+
+    function handleImport(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+            try {
+                const data = JSON.parse(evt.target.result);
+                if (data.folders) {
+                    folders = data.folders;
+                    currentFontSize = data.currentFontSize || 22;
+                    applyFontSize();
+                    saveAndRender();
+                    alert("Dữ liệu đã được nhập thành công!");
+                } else {
+                    alert("File không đúng định dạng!");
+                }
+            } catch (err) {
+                alert("Lỗi khi đọc file!");
+            }
+        };
+        reader.readAsText(file);
+        e.target.value = ''; // Reset input file
+    }
+
+    // 5. CÁC CHỨC NĂNG KHÁC
+    function changeFontSize(step) {
+        currentFontSize = Math.min(Math.max(currentFontSize + step, 12), 40);
+        applyFontSize();
+        saveAndRender();
+    }
+
+    function applyFontSize() {
+        document.documentElement.style.setProperty('--link-font-size', currentFontSize + 'px');
+        document.getElementById('fontSizeDisplay').innerText = currentFontSize;
+    }
+
+    function exportHTML() {
+        const currentHTML = document.documentElement.outerHTML;
+        const regex = /\/\/ --- DATA_START ---[\s\S]*?\/\/ --- DATA_END ---/;
+        const dataString = `// --- DATA_START ---\nvar INITIAL_DATA = ${JSON.stringify(folders)};\nvar INITIAL_FONT_SIZE = ${currentFontSize};\n// --- DATA_END ---`;
+        const newHTML = "<!DOCTYPE html>\n<html lang=\"vi\">\n" + currentHTML.replace(regex, dataString) + "\n</html>";
+        const blob = new Blob([newHTML], { type: 'text/html' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'Link_Manager_Portable.html';
+        a.click();
+    }
+
+    // 6. DRAG & DROP
+    function handleFolderDragStart(e, index) {
+        if(e.target.closest('.links-list li')) return;
+        draggedType = 'folder';
+        draggedFolderIndex = index;
+        setTimeout(() => e.target.style.opacity = "0.5", 0);
+    }
+
+    function handleFolderDrop(e, targetIndex) {
+        e.preventDefault();
+        if (draggedType === 'folder' && draggedFolderIndex !== targetIndex) {
+            const item = folders.splice(draggedFolderIndex, 1)[0];
+            folders.splice(targetIndex, 0, item);
+            saveAndRender();
+        } else if (draggedType === 'link' && draggedLinkInfo && !e.target.closest('li')) {
+            const link = folders[draggedLinkInfo.fIndex].links.splice(draggedLinkInfo.lIndex, 1)[0];
+            folders[targetIndex].links.push(link);
+            saveAndRender();
+        }
+    }
+
+    function handleLinkDragStart(e, fIdx, lIdx) {
+        e.stopPropagation();
+        draggedType = 'link';
+        draggedLinkInfo = { fIndex: fIdx, lIndex: lIdx };
+        setTimeout(() => e.target.style.opacity = "0.5", 0);
+    }
+
+    function handleLinkDrop(e, targetFIdx, targetLIdx) {
+        e.preventDefault(); e.stopPropagation();
+        if (draggedType === 'link' && draggedLinkInfo) {
+            const { fIndex, lIndex } = draggedLinkInfo;
+            const link = folders[fIndex].links.splice(lIndex, 1)[0];
+            folders[targetFIdx].links.splice(targetLIdx, 0, link);
+            saveAndRender();
+        }
+    }
+
+    // 7. RENDER
+    function render() {
+        const container = document.getElementById('foldersContainer');
+        container.innerHTML = '';
+        folders.forEach((folder, fIndex) => {
+            const box = document.createElement('div');
+            box.className = `folder-box ${folder.isCollapsed ? 'collapsed' : ''}`;
+            box.setAttribute('draggable', 'true');
+            box.ondragstart = (e) => handleFolderDragStart(e, fIndex);
+            box.ondragend = (e) => { e.target.style.opacity = "1"; document.querySelectorAll('.folder-box').forEach(b => b.classList.remove('drag-over')); };
+            box.ondragover = (e) => e.preventDefault();
+            box.ondragenter = (e) => e.target.closest('.folder-box')?.classList.add('drag-over');
+            box.ondragleave = (e) => e.target.closest('.folder-box')?.classList.remove('drag-over');
+            box.ondrop = (e) => handleFolderDrop(e, fIndex);
+
+            box.innerHTML = `
+                <div class="folder-header" style="background-color: ${folder.color || '#1e1e1e'}">
+                    <div class="folder-title" onclick="toggleFolder(${fIndex})">
+                        <i class="fas fa-cog" onclick="event.stopPropagation(); openEditFolder(${fIndex})"></i>
+                        <span>${folder.name}</span>
+                    </div>
+                    <div class="folder-actions">
+                        <i class="fas fa-plus-circle btn-mini btn-add-link" onclick="openModal('${folder.id}')"></i>
+                        <i class="fas fa-chevron-up btn-mini" onclick="toggleFolder(${fIndex})"></i>
+                        <i class="fas fa-trash-alt btn-mini btn-delete" onclick="deleteFolder(${fIndex})"></i>
+                    </div>
+                </div>
+                <div class="folder-box-content">
+                    <ul class="links-list">
+                        ${folder.links.map((link, lIndex) => `
+                            <li draggable="true" ondragstart="handleLinkDragStart(event, ${fIndex}, ${lIndex})" ondragend="this.style.opacity='1'" ondrop="handleLinkDrop(event, ${fIndex}, ${lIndex})" ondragover="event.preventDefault()">
+                                <a href="${link.url}" target="_blank">
+                                    <i class="fas fa-edit link-icon" onclick="event.preventDefault(); event.stopPropagation(); openEditLink(${fIndex}, '${link.id}')"></i>
+                                    ${link.name}
+                                </a>
+                                <i class="fas fa-times btn-mini btn-delete" onclick="deleteLink(${fIndex}, '${link.id}')"></i>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+            container.appendChild(box);
+        });
+    }
+
+    init();
+</script>
+</body>
+</html>
