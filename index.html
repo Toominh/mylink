@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyLink Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"></script>
-    
+    <!-- <script src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"></script> -->
     <style>
         /* CSS - Darkmode & Biến cục bộ */
         :root {
@@ -177,16 +175,19 @@
             background-color: var(--surface-color);
             border: 1px solid var(--border-color);
             border-radius: 10px;
+            cursor: grab;
             display: flex;
             flex-direction: column;
             transition: border-color 0.2s;
             overflow: hidden;
+            
             break-inside: avoid;
             page-break-inside: avoid;
             margin-bottom: 20px;
         }
 
         .folder-box-content { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; }
+        .folder-box:active { cursor: grabbing; }
         .folder-box.drag-over { border: 2px dashed var(--primary-color); opacity: 0.7; }
 
         .folder-header {
@@ -194,11 +195,8 @@
             font-size: 18px; font-weight: bold; 
             padding: 15px; 
             border-bottom: 1px solid var(--border-color); 
-            cursor: grab;
         }
         
-        .folder-header:active { cursor: grabbing; }
-
         .folder-title { display: flex; align-items: center; gap: 10px; flex: 1; }
         .folder-title i { transition: transform 0.2s; cursor: pointer; color: var(--primary-color); }
         .folder-title i:hover { transform: scale(1.2); }
@@ -699,7 +697,7 @@ var INITIAL_FONT_SIZE = 22;
         if(e.target.closest('.links-list li')) return;
         draggedType = 'folder';
         draggedFolderIndex = index;
-        setTimeout(() => e.target.closest('.folder-box').style.opacity = "0.5", 0);
+        setTimeout(() => e.target.style.opacity = "0.5", 0);
     }
 
     function handleFolderDrop(e, targetIndex) {
@@ -739,18 +737,16 @@ var INITIAL_FONT_SIZE = 22;
         folders.forEach((folder, fIndex) => {
             const box = document.createElement('div');
             box.className = `folder-box ${folder.isCollapsed ? 'collapsed' : ''}`;
-            
-            box.dataset.folderIndex = fIndex;
+            box.setAttribute('draggable', 'true');
+            box.ondragstart = (e) => handleFolderDragStart(e, fIndex);
+            box.ondragend = (e) => { e.target.style.opacity = "1"; document.querySelectorAll('.folder-box').forEach(b => b.classList.remove('drag-over')); };
             box.ondragover = (e) => e.preventDefault();
             box.ondragenter = (e) => e.target.closest('.folder-box')?.classList.add('drag-over');
             box.ondragleave = (e) => e.target.closest('.folder-box')?.classList.remove('drag-over');
             box.ondrop = (e) => handleFolderDrop(e, fIndex);
 
             box.innerHTML = `
-                <div class="folder-header" style="background-color: ${folder.color || '#1e1e1e'}"
-                     draggable="true" 
-                     ondragstart="handleFolderDragStart(event, ${fIndex})"
-                     ondragend="this.parentElement.style.opacity='1'; document.querySelectorAll('.folder-box').forEach(b => b.classList.remove('drag-over'));">
+                <div class="folder-header" style="background-color: ${folder.color || '#1e1e1e'}">
                     <div class="folder-title" onclick="toggleFolder(${fIndex})">
                         <i class="fas fa-cog" onclick="event.stopPropagation(); openEditFolder(${fIndex})"></i>
                         <span>${folder.name}</span>
