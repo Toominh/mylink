@@ -693,13 +693,12 @@ var INITIAL_FONT_SIZE = 22;
     }
 
     // 6. DRAG & DROP
-function handleFolderDragStart(e, index) {
-    if(e.target.closest('.links-list li')) return;
-    draggedType = 'folder';
-    draggedFolderIndex = index;
-    // Làm mờ toàn bộ thư mục (thẻ cha) thay vì chỉ làm mờ tiêu đề
-    setTimeout(() => e.target.closest('.folder-box').style.opacity = "0.5", 0);
-}
+    function handleFolderDragStart(e, index) {
+        if(e.target.closest('.links-list li')) return;
+        draggedType = 'folder';
+        draggedFolderIndex = index;
+        setTimeout(() => e.target.style.opacity = "0.5", 0);
+    }
 
     function handleFolderDrop(e, targetIndex) {
         e.preventDefault();
@@ -738,19 +737,8 @@ function handleFolderDragStart(e, index) {
         folders.forEach((folder, fIndex) => {
             const box = document.createElement('div');
             box.className = `folder-box ${folder.isCollapsed ? 'collapsed' : ''}`;
-// Thêm một thuộc tính dataset để dễ nhận diện khi kéo thả
-box.dataset.folderIndex = fIndex; 
-box.ondragover = (e) => e.preventDefault();
-box.ondragenter = (e) => e.target.closest('.folder-box')?.classList.add('drag-over');
-box.ondragleave = (e) => e.target.closest('.folder-box')?.classList.remove('drag-over');
-box.ondrop = (e) => handleFolderDrop(e, fIndex);
-
-box.innerHTML = `
-    <div class="folder-header" style="background-color: ${folder.color || '#1e1e1e'}" 
-         draggable="true" 
-         ondragstart="handleFolderDragStart(event, ${fIndex})"
-         ondragend="this.parentElement.style.opacity='1'; document.querySelectorAll('.folder-box').forEach(b => b.classList.remove('drag-over'));">
-        <div class="folder-title" onclick="toggleFolder(${fIndex})">
+            box.setAttribute('draggable', 'true');
+            box.ondragstart = (e) => handleFolderDragStart(e, fIndex);
             box.ondragend = (e) => { e.target.style.opacity = "1"; document.querySelectorAll('.folder-box').forEach(b => b.classList.remove('drag-over')); };
             box.ondragover = (e) => e.preventDefault();
             box.ondragenter = (e) => e.target.closest('.folder-box')?.classList.add('drag-over');
