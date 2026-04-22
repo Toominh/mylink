@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyLink Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- <script src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"></script> -->
+    <script src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"></script>
     <style>
         /* CSS - Darkmode & Biến cục bộ */
         :root {
@@ -253,6 +253,16 @@
 
         /* Tiện ích ẩn */
         #importFile { display: none; }
+
+        /* --- Trạng thái khi tắt kéo thả --- */
+        body.drag-disabled .folder-box,
+        body.drag-disabled .links-list li {
+            cursor: default;
+        }
+        body.drag-disabled .folder-box:active,
+        body.drag-disabled .links-list li:active {
+            cursor: default;
+        }
     </style>
 </head>
 <body>
@@ -296,6 +306,10 @@
         </div>
         
         <div class="action-group">
+            <button id="btnToggleDrag" class="btn-outline" onclick="toggleDragDrop()" title="Bật/tắt chế độ kéo thả">
+                <i class="fas fa-hand-rock"></i> Kéo thả: BẬT
+            </button>
+
             <div style="display: flex; align-items: center; gap: 5px; background: #333; padding: 2px 10px; border-radius: 6px; margin-right: 10px;">
                 <span style="font-size: 12px; color: #888;">Font Link:</span>
                 <button class="btn-mini" onclick="changeFontSize(-1)"><i class="fas fa-minus"></i></button>
@@ -386,6 +400,8 @@ var INITIAL_FONT_SIZE = 22;
     let noteTabs = JSON.parse(localStorage.getItem('bm_notes_tabs')) || [{ id: 'tab_1', title: 'Ghi chú 1', content: localStorage.getItem('bm_notes_content') || '' }];
     let activeTabId = localStorage.getItem('bm_active_tab') || noteTabs[0].id;
 
+    let isDragEnabled = localStorage.getItem('bm_drag_enabled') !== 'false'; // Mặc định là true (Bật)
+
     let draggedType = null;
     let draggedFolderIndex = null;
     let draggedLinkInfo = null;
@@ -393,7 +409,33 @@ var INITIAL_FONT_SIZE = 22;
     function init() {
         applyFontSize();
         initHeaderAndNotes();
+        updateDragDropUI();
         render();
+    }
+
+    // --- HÀM XỬ LÝ BẬT/TẮT KÉO THẢ ---
+    function toggleDragDrop() {
+        isDragEnabled = !isDragEnabled;
+        localStorage.setItem('bm_drag_enabled', isDragEnabled);
+        updateDragDropUI();
+        render(); // Render lại để gắn/gỡ thuộc tính draggable
+    }
+
+    function updateDragDropUI() {
+        const btn = document.getElementById('btnToggleDrag');
+        if (!btn) return;
+        
+        if (isDragEnabled) {
+            btn.innerHTML = '<i class="fas fa-hand-rock"></i> Kéo thả: BẬT';
+            btn.style.color = 'var(--secondary-color)';
+            btn.style.borderColor = 'var(--secondary-color)';
+            document.body.classList.remove('drag-disabled');
+        } else {
+            btn.innerHTML = '<i class="fas fa-hand-paper"></i> Kéo thả: TẮT';
+            btn.style.color = '#888';
+            btn.style.borderColor = '#444';
+            document.body.classList.add('drag-disabled');
+        }
     }
 
     // --- TÍNH NĂNG GHI CHÚ VÀ THỜI GIAN ---
@@ -523,16 +565,12 @@ var INITIAL_FONT_SIZE = 22;
         panel.classList.toggle('fullscreen');
         
         if (panel.classList.contains('fullscreen')) {
-            // Chuyển icon sang thu nhỏ
             icon.classList.remove('fa-expand');
             icon.classList.add('fa-compress');
-            // Ẩn thanh cuộn của trang web phía sau
             document.body.style.overflow = 'hidden'; 
         } else {
-            // Chuyển icon về mở rộng
             icon.classList.remove('fa-compress');
             icon.classList.add('fa-expand');
-            // Bật lại thanh cuộn
             document.body.style.overflow = '';
         }
     }
@@ -737,13 +775,19 @@ var INITIAL_FONT_SIZE = 22;
         folders.forEach((folder, fIndex) => {
             const box = document.createElement('div');
             box.className = `folder-box ${folder.isCollapsed ? 'collapsed' : ''}`;
-            box.setAttribute('draggable', 'true');
-            box.ondragstart = (e) => handleFolderDragStart(e, fIndex);
-            box.ondragend = (e) => { e.target.style.opacity = "1"; document.querySelectorAll('.folder-box').forEach(b => b.classList.remove('drag-over')); };
-            box.ondragover = (e) => e.preventDefault();
-            box.ondragenter = (e) => e.target.closest('.folder-box')?.classList.add('drag-over');
-            box.ondragleave = (e) => e.target.closest('.folder-box')?.classList.remove('drag-over');
-            box.ondrop = (e) => handleFolderDrop(e, fIndex);
+            
+            // Cài đặt kéo thả dựa trên trạng thái nút Bật/Tắt
+            if (isDragEnabled) {
+                box.setAttribute('draggable', 'true');
+                box.ondragstart = (e) => handleFolderDragStart(e, fIndex);
+                box.ondragend = (e) => { e.target.style.opacity = "1"; document.querySelectorAll('.folder-box').forEach(b => b.classList.remove('drag-over')); };
+                box.ondragover = (e) => e.preventDefault();
+                box.ondragenter = (e) => e.target.closest('.folder-box')?.classList.add('drag-over');
+                box.ondragleave = (e) => e.target.closest('.folder-box')?.classList.remove('drag-over');
+                box.ondrop = (e) => handleFolderDrop(e, fIndex);
+            } else {
+                box.removeAttribute('draggable');
+            }
 
             box.innerHTML = `
                 <div class="folder-header" style="background-color: ${folder.color || '#1e1e1e'}">
@@ -760,7 +804,7 @@ var INITIAL_FONT_SIZE = 22;
                 <div class="folder-box-content">
                     <ul class="links-list">
                         ${folder.links.map((link, lIndex) => `
-                            <li draggable="true" ondragstart="handleLinkDragStart(event, ${fIndex}, ${lIndex})" ondragend="this.style.opacity='1'" ondrop="handleLinkDrop(event, ${fIndex}, ${lIndex})" ondragover="event.preventDefault()">
+                            <li ${isDragEnabled ? `draggable="true" ondragstart="handleLinkDragStart(event, ${fIndex}, ${lIndex})" ondragend="this.style.opacity='1'" ondrop="handleLinkDrop(event, ${fIndex}, ${lIndex})" ondragover="event.preventDefault()"` : ''}>
                                 <a href="${link.url}" target="_blank">
                                     <i class="fas fa-edit link-icon" onclick="event.preventDefault(); event.stopPropagation(); openEditLink(${fIndex}, '${link.id}')"></i>
                                     ${link.name}
