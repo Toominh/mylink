@@ -273,8 +273,16 @@
         <button class="btn-primary" onclick="toggleNotes()">
             <i class="fas fa-edit"></i> Note
         </button>
-        <div class="date-display" id="currentDate">Đang tải ngày...</div>
-        <div class="time-display" id="currentTime">--:--</div>
+       <button class="btn-outline" onclick="expandAll()" title="Mở rộng tất cả các thư mục">
+                <i class="fas fa-expand-arrows-alt"></i> Mở rộng
+        </button>
+        <button class="btn-outline" onclick="collapseAll()" title="Thu gọn tất cả các thư mục">
+                <i class="fas fa-compress-arrows-alt"></i> Thu gọn
+        </button>
+        <button id="btnToggleDrag" class="btn-outline" onclick="toggleDragDrop()" title="Bật/tắt chế độ kéo thả">
+                <i class="fas fa-hand-rock"></i> Kéo thả: BẬT
+        </button>
+
     </div>
 
     <div class="notes-panel" id="notesPanel">
@@ -525,19 +533,7 @@ var INITIAL_FONT_SIZE = 22;
         }
     }
 
-    function updateDateTime() {
-        const now = new Date();
-        const days = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
-        const dayName = days[now.getDay()];
-        const date = now.getDate().toString().padStart(2, '0');
-        const month = (now.getMonth() + 1).toString().padStart(2, '0');
-        const year = now.getFullYear();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
 
-        document.getElementById('currentDate').innerText = `${dayName}, ${date}/${month}/${year}`;
-        document.getElementById('currentTime').innerText = `${hours}:${minutes}`;
-    }
 
     function toggleNotes() {
         const panel = document.getElementById('notesPanel');
