@@ -1,0 +1,1395 @@
+{
+  "folders": [
+    {
+      "id": "f_1776703878837",
+      "name": "Báo",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1776703946916",
+          "name": "Msn",
+          "url": "http://www.msn.com/"
+        },
+        {
+          "id": "l_1776703453401",
+          "name": "Tia sáng",
+          "url": "https://tiasang.com.vn/"
+        },
+        {
+          "id": "l_1776703972348",
+          "name": "Feedly",
+          "url": "https://feedly.com/"
+        },
+        {
+          "id": "l_1776704132800",
+          "name": "Chúng ta",
+          "url": "https://chungta.com/"
+        },
+        {
+          "id": "l_1776704170034",
+          "name": "Nghiên cứu lịch sử",
+          "url": "https://nghiencuulichsu.com/"
+        },
+        {
+          "id": "l_1776704225950",
+          "name": "Art Times",
+          "url": "https://arttimes.vn/"
+        }
+      ],
+      "color": "#381868"
+    },
+    {
+      "id": "f_1776659133307",
+      "name": "Youtube Tin tức",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777346496750",
+          "name": "THP",
+          "url": "https://www.youtube.com/@DaiPhatThanhTruyenHinhHaiPhong/videos"
+        },
+        {
+          "id": "l_1777306676014",
+          "name": "BBC News Tiếng Việt",
+          "url": "https://www.youtube.com/@bbctiengviet/videos"
+        },
+        {
+          "id": "l_1776697678631",
+          "name": "BNC Now",
+          "url": "https://www.youtube.com/@BNCNow/videos"
+        },
+        {
+          "id": "l_1776697731852",
+          "name": "Đại Kỷ Nguyên",
+          "url": "https://www.youtube.com/@DKNNews/videos"
+        },
+        {
+          "id": "l_1776697764510",
+          "name": "FBNC",
+          "url": "https://www.youtube.com/@fbncnews/videos"
+        },
+        {
+          "id": "l_1776697805952",
+          "name": "VTC News",
+          "url": "https://www.youtube.com/@VTCNewstintuc/videos"
+        },
+        {
+          "id": "l_1776697827890",
+          "name": "VTV24",
+          "url": "https://www.youtube.com/@vtv24/videos"
+        },
+        {
+          "id": "l_1776697904889",
+          "name": "VTV Thời Tiết",
+          "url": "https://www.youtube.com/@vtvthoitietofficial/videos"
+        },
+        {
+          "id": "l_1776697933168",
+          "name": "VTV Index",
+          "url": "https://www.youtube.com/@VTVIndex/videos"
+        }
+      ],
+      "color": "#d10000"
+    },
+    {
+      "id": "f_1776701933431",
+      "name": "1",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1776701987969",
+          "name": "Lịch Tu An",
+          "url": "https://toominh.github.io/lichtuan/"
+        },
+        {
+          "id": "l_1776703156708",
+          "name": "SSI",
+          "url": "https://iboard.ssi.com.vn/"
+        },
+        {
+          "id": "l_1776704345724",
+          "name": "Shopee",
+          "url": "https://shopee.vn/"
+        },
+        {
+          "id": "l_1776703347984",
+          "name": "Điện Nước",
+          "url": "https://docs.google.com/spreadsheets/d/1Knz-M7xjemdBL-u2G8hogPC1zSRKNmtvDH8EYX9GmPY/edit#gid=0"
+        },
+        {
+          "id": "l_1776702050135",
+          "name": "Facebook",
+          "url": "https://fb.com"
+        },
+        {
+          "id": "l_1776702142575",
+          "name": "Youtube",
+          "url": "https://www.youtube.com/"
+        },
+        {
+          "id": "l_1776702883512",
+          "name": "Vtvgo",
+          "url": "https://vtvgo.vn/"
+        },
+        {
+          "id": "l_1776702921402",
+          "name": "Họ Lê Nguyễn",
+          "url": "https://www.facebook.com/groups/1850512801848252"
+        },
+        {
+          "id": "l_1776702937860",
+          "name": "Minh Sen",
+          "url": "https://www.facebook.com/groups/1706291643025833"
+        },
+        {
+          "id": "l_1776703219267",
+          "name": "Send To Kindle",
+          "url": "https://www.amazon.com/sendtokindle"
+        },
+        {
+          "id": "l_1776703512081",
+          "name": "TpLink Repeater",
+          "url": "http://tplinkrepeater.net/"
+        },
+        {
+          "id": "l_1776704087312",
+          "name": "Thuỷ triều Đình Vũ",
+          "url": "https://dinhvuport.com.vn/vn/tidetable.html"
+        },
+        {
+          "id": "l_1776704272151",
+          "name": "Windy",
+          "url": "https://www.windy.com/vi/-M%C3%A2y-clouds?clouds,16.088,110.830,5"
+        }
+      ],
+      "color": "#2e521e"
+    },
+    {
+      "id": "f_1776658949690",
+      "name": "Facebook",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1776698145680",
+          "name": "VTV",
+          "url": "https://www.facebook.com/thoisuvtv/"
+        },
+        {
+          "id": "l_1776698532508",
+          "name": "VTV2",
+          "url": "https://www.facebook.com/vtvchatluongcuocsong/"
+        },
+        {
+          "id": "l_1776698164905",
+          "name": "VTV24",
+          "url": "https://www.facebook.com/tintucvtv24"
+        },
+        {
+          "id": "l_1776698982842",
+          "name": "RFI",
+          "url": "https://www.facebook.com/RFIvi?v=timeline"
+        },
+        {
+          "id": "l_1776698951810",
+          "name": "BNC News",
+          "url": "https://www.facebook.com/BNCGlobalNews/"
+        },
+        {
+          "id": "l_1776698703926",
+          "name": "Tạp chí Tia sáng",
+          "url": "https://web.facebook.com/TIASANG.1991"
+        },
+        {
+          "id": "l_1776698187651",
+          "name": "Cafe sáng",
+          "url": "https://www.facebook.com/cafesangvoivtv3"
+        },
+        {
+          "id": "l_1776698204243",
+          "name": "Tuổi trẻ",
+          "url": "https://www.facebook.com/baotuoitre/"
+        },
+        {
+          "id": "l_1776698222677",
+          "name": "Thanh niên",
+          "url": "https://www.facebook.com/thanhnien/"
+        },
+        {
+          "id": "l_1776698239842",
+          "name": "Thể thao 24",
+          "url": "https://www.facebook.com/pagethethao24h"
+        },
+        {
+          "id": "l_1776698271506",
+          "name": "Vnexpress",
+          "url": "https://www.facebook.com/congdongvnexpress"
+        },
+        {
+          "id": "l_1776698303102",
+          "name": "THP",
+          "url": "https://www.facebook.com/truyenhinhhaiphong.vn/"
+        },
+        {
+          "id": "l_1776698332736",
+          "name": "Cổng tin tức HP",
+          "url": "https://www.facebook.com/congtintuchaiphong/"
+        },
+        {
+          "id": "l_1776698357402",
+          "name": "Hải Phòng Project",
+          "url": "https://www.facebook.com/duanhaiphong/"
+        },
+        {
+          "id": "l_1776698378960",
+          "name": "Beat Hải Phòng",
+          "url": "https://www.facebook.com/groups/haiphongbeatvn/"
+        },
+        {
+          "id": "l_1776698401455",
+          "name": "Những người con đảo Cát",
+          "url": "https://www.facebook.com/groups/384325368603304/"
+        },
+        {
+          "id": "l_1776698782582",
+          "name": "Quán văn",
+          "url": "https://www.facebook.com/groups/381819412717458?v=timeline"
+        },
+        {
+          "id": "l_1776698896629",
+          "name": "Lê Văn Luyện",
+          "url": "https://www.facebook.com/le.van.luyen.386697"
+        },
+        {
+          "id": "l_1776699058490",
+          "name": "Nhật ký yêu nước",
+          "url": "https://www.facebook.com/nhatkyyeunuoc1"
+        },
+        {
+          "id": "l_1776699074537",
+          "name": "Luật khoa",
+          "url": "https://www.facebook.com/luatkhoa.org/"
+        },
+        {
+          "id": "l_1776699092396",
+          "name": "Thông luận",
+          "url": "https://www.facebook.com/ethongluan.org"
+        },
+        {
+          "id": "l_1776699159448",
+          "name": "Lê Trung Khoa",
+          "url": "https://www.facebook.com/le.t.khoa.1"
+        },
+        {
+          "id": "l_1776699178312",
+          "name": "Nguyến Văn Đài",
+          "url": "https://www.facebook.com/nguyenvandai0906"
+        },
+        {
+          "id": "l_1776699197019",
+          "name": "Hoàng Dũng",
+          "url": "https://www.facebook.com/hocgiahd?v=timeline"
+        },
+        {
+          "id": "l_1776699215899",
+          "name": "Thanh Mai",
+          "url": "https://www.facebook.com/mai.thanh.mai.704647"
+        },
+        {
+          "id": "l_1776699235951",
+          "name": "Nguyễn Xuân Diện",
+          "url": "https://www.facebook.com/nxdien2k15?v=timeline"
+        },
+        {
+          "id": "l_1776699435946",
+          "name": "Dương Quốc Chính",
+          "url": "https://www.facebook.com/chinh.duong.quoc.kts"
+        },
+        {
+          "id": "l_1776699454811",
+          "name": "Nguyễn Tuấn",
+          "url": "https://www.facebook.com/t.nguyen.2016"
+        },
+        {
+          "id": "l_1776699470263",
+          "name": "Bs Trần Văn Phúc",
+          "url": "https://www.facebook.com/Bs.Phuc.Radiologist"
+        },
+        {
+          "id": "l_1776699491669",
+          "name": "Nguyễn Ngọc Chu",
+          "url": "https://www.facebook.com/chu.nguyenngoc?v=timeline"
+        },
+        {
+          "id": "l_1776699521408",
+          "name": "Ngô Đồng",
+          "url": "https://www.facebook.com/kha.giacnam"
+        },
+        {
+          "id": "l_1776699536417",
+          "name": "Cu Dệ",
+          "url": "https://www.facebook.com/lhtu76"
+        },
+        {
+          "id": "l_1776699548428",
+          "name": "Hoàng Hối Hận",
+          "url": "https://www.facebook.com/hoangfaver"
+        },
+        {
+          "id": "l_1776699564632",
+          "name": "Mượt",
+          "url": "https://www.facebook.com/muot.ma.3"
+        },
+        {
+          "id": "l_1776699578123",
+          "name": "Nguyễn Thông",
+          "url": "https://www.facebook.com/nguyen.thong.755506"
+        },
+        {
+          "id": "l_1776699590433",
+          "name": "Lao Ta",
+          "url": "https://www.facebook.com/lao.ta.794908"
+        },
+        {
+          "id": "l_1776699605789",
+          "name": "Trần Quóc Quân",
+          "url": "https://www.facebook.com/quocquan.tran.7906932"
+        },
+        {
+          "id": "l_1776699621800",
+          "name": "Ha Ngoc Nguyen",
+          "url": "https://www.facebook.com/hangoc.nguyen.961"
+        },
+        {
+          "id": "l_1776699823909",
+          "name": "Nguyễn Quảng",
+          "url": "https://web.facebook.com/profile.php?id=100080861858370"
+        }
+      ],
+      "color": "#2c68ff"
+    },
+    {
+      "id": "f_1776658941042",
+      "name": "Podcast",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1776659087809",
+          "name": "RFI",
+          "url": "https://podcasts.apple.com/vn/podcast/ch%C6%B0%C6%A1ng-tr%C3%ACnh-60/id1571503601?l=vi"
+        },
+        {
+          "id": "l_1776701083481",
+          "name": "SBS",
+          "url": "https://podcasts.apple.com/vn/podcast/sbs-vietnamese-sbs-vi%E1%BB%87t-ng%E1%BB%AF/id161320292"
+        },
+        {
+          "id": "l_1776701102235",
+          "name": "KBS Hàn Quốc",
+          "url": "https://podcasts.apple.com/vn/podcast/kbs-world-radio-b%E1%BA%A3n-tin-h%C3%A0ng-ng%C3%A0y/id476233783"
+        },
+        {
+          "id": "l_1776701157024",
+          "name": "VOV Thời sự",
+          "url": "https://podcasts.apple.com/vn/podcast/vov-ch%C6%B0%C6%A1ng-tri-nh-th%C6%A1-i-s%C6%B0/id1448565355"
+        },
+        {
+          "id": "l_1776701443815",
+          "name": "VOV Kinh tế Tài chính",
+          "url": "https://podcasts.apple.com/vn/podcast/vov-kinh-t%E1%BA%BF-t%C3%A0i-ch%C3%ADnh/id1447843388"
+        },
+        {
+          "id": "l_1776701187561",
+          "name": "VOV Sự kiện và Bàn luận",
+          "url": "https://podcasts.apple.com/vn/podcast/vov-s%E1%BB%B1-ki%E1%BB%87n-v%C3%A0-b%C3%A0n-lu%E1%BA%ADn/id1447959801"
+        },
+        {
+          "id": "l_1776701316779",
+          "name": "Spiderum",
+          "url": "https://podcasts.apple.com/vn/podcast/spiderum-official/id1498937274"
+        },
+        {
+          "id": "l_1776701340587",
+          "name": "Tâm Sự Tài Chính",
+          "url": "https://podcasts.apple.com/vn/podcast/t%C3%A2m-s%E1%BB%B1-t%C3%A0i-ch%C3%ADnh/id1532006862"
+        },
+        {
+          "id": "l_1776701384868",
+          "name": "Minh Niệm",
+          "url": "https://podcasts.apple.com/vn/podcast/minh-ni%E1%BB%87m/id1505157864"
+        },
+        {
+          "id": "l_1776701500676",
+          "name": "Vietnam Innovators",
+          "url": "https://podcasts.apple.com/vn/podcast/vietnam-innovators-ti%E1%BA%BFng-vi%E1%BB%87t/id1552132023"
+        },
+        {
+          "id": "l_1776701523493",
+          "name": "TU THÂN",
+          "url": "https://podcasts.apple.com/vn/podcast/tu-th%C3%A2n-n%E1%BB%97-l%E1%BB%B1c-%C4%91%E1%BB%83-b%E1%BA%A3n-th%C3%A2n-t%E1%BB%91t-h%C6%A1n-m%E1%BB%97i-ng%C3%A0y/id1554823389"
+        },
+        {
+          "id": "l_1776701559155",
+          "name": "The Cosmic Writer",
+          "url": "https://podcasts.apple.com/vn/podcast/the-cosmic-writer/id1596439377"
+        },
+        {
+          "id": "l_1776701624208",
+          "name": "Have A Sip",
+          "url": "https://podcasts.apple.com/vn/podcast/have-a-sip/id1540283905"
+        },
+        {
+          "id": "l_1776701711198",
+          "name": "The Quoc Khanh Show",
+          "url": "https://podcasts.apple.com/vn/podcast/the-quoc-khanh-show/id1419543831"
+        },
+        {
+          "id": "l_1776701772927",
+          "name": "Bánh Xe Luân Hồi",
+          "url": "https://podcasts.apple.com/vn/podcast/b%C3%A1nh-xe-lu%C3%A2n-h%E1%BB%93i/id1542797878"
+        },
+        {
+          "id": "l_1776701865884",
+          "name": "Tri Kỷ Cảm Xúc",
+          "url": "https://podcasts.apple.com/vn/podcast/tri-k%E1%BB%B7-c%E1%BA%A3m-x%C3%BAc/id1355572154"
+        }
+      ],
+      "color": "#a939b1"
+    },
+    {
+      "id": "f_1776658957849",
+      "name": "Tiktok",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1776700368844",
+          "name": "THP",
+          "url": "https://www.tiktok.com/@truyenhinhhaiphong"
+        },
+        {
+          "id": "l_1776700387644",
+          "name": "VTV24",
+          "url": "https://www.tiktok.com/@vtv24news"
+        },
+        {
+          "id": "l_1776700405372",
+          "name": "VnExpress",
+          "url": "https://www.tiktok.com/@vnexpress.official"
+        },
+        {
+          "id": "l_1776700417887",
+          "name": "VOV1",
+          "url": "https://www.tiktok.com/@baodientuvov"
+        },
+        {
+          "id": "l_1776700429217",
+          "name": "Dân trí",
+          "url": "https://www.tiktok.com/@dantri.com.vn"
+        },
+        {
+          "id": "l_1776700440178",
+          "name": "Tuổi trẻ",
+          "url": "https://www.tiktok.com/@baotuoitre"
+        },
+        {
+          "id": "l_1776700450706",
+          "name": "Thanh niên",
+          "url": "https://www.tiktok.com/@baothanhnien.official"
+        },
+        {
+          "id": "l_1776700461316",
+          "name": "VTV4go",
+          "url": "https://www.tiktok.com/@vtv4go"
+        },
+        {
+          "id": "l_1776700474673",
+          "name": "Vnews360",
+          "url": "https://www.tiktok.com/@vnews360"
+        },
+        {
+          "id": "l_1776700508651",
+          "name": "VTC News",
+          "url": "https://www.tiktok.com/@vtcnews"
+        },
+        {
+          "id": "l_1776700523657",
+          "name": "Bongda24h",
+          "url": "https://www.tiktok.com/@bongda24h.vn.official"
+        },
+        {
+          "id": "l_1776700533118",
+          "name": "Vtvcab",
+          "url": "https://www.tiktok.com/@vtvcab.tintuc"
+        },
+        {
+          "id": "l_1776700544486",
+          "name": "VTC",
+          "url": "https://www.tiktok.com/@vtcnews"
+        },
+        {
+          "id": "l_1776700557843",
+          "name": "VOV",
+          "url": "https://www.tiktok.com/@truyenhinhvov"
+        },
+        {
+          "id": "l_1776700577658",
+          "name": "Vnn",
+          "url": "https://www.tiktok.com/@vnnn.official"
+        },
+        {
+          "id": "l_1776700601883",
+          "name": "Tổ buôn 247",
+          "url": "https://www.tiktok.com/@to_buon.247"
+        },
+        {
+          "id": "l_1776700613888",
+          "name": "Hài Bắc xưa",
+          "url": "https://www.tiktok.com/@haibacxua"
+        },
+        {
+          "id": "l_1776700624665",
+          "name": "Hài 68",
+          "url": "https://www.tiktok.com/@kenhhaihuoc68"
+        },
+        {
+          "id": "l_1776700635792",
+          "name": "Dr Lam",
+          "url": "https://www.tiktok.com/@updatewithlam"
+        },
+        {
+          "id": "l_1776700646526",
+          "name": "Ts An",
+          "url": "https://www.tiktok.com/@tsdsngocan"
+        },
+        {
+          "id": "l_1776700656721",
+          "name": "Su that man",
+          "url": "https://www.tiktok.com/@tacgiasuthatman"
+        },
+        {
+          "id": "l_1776700668860",
+          "name": "Chậm lại 5'",
+          "url": "https://www.tiktok.com/@chamlai5phut"
+        },
+        {
+          "id": "l_1776700712389",
+          "name": "Nhân duyên 68",
+          "url": "https://www.tiktok.com/@nhanduyen_68"
+        },
+        {
+          "id": "l_1776700679929",
+          "name": "Design",
+          "url": "https://www.tiktok.com/@anhbiettuotdesign"
+        },
+        {
+          "id": "l_1776700689808",
+          "name": "Tân Phú Khánh",
+          "url": "https://www.tiktok.com/@tranhdaquytanphukhanh"
+        },
+        {
+          "id": "l_1776700724341",
+          "name": "Kinh nghiệm sống",
+          "url": "https://www.tiktok.com/@kinhnghiemsong_68"
+        },
+        {
+          "id": "l_1776700741179",
+          "name": "Đạo đời",
+          "url": "https://www.tiktok.com/@dao_doi_trietly88"
+        },
+        {
+          "id": "l_1776700757501",
+          "name": "Sống và ngẫm",
+          "url": "https://www.tiktok.com/@songvangamcuocsong"
+        },
+        {
+          "id": "l_1776700771715",
+          "name": "Triết lý cuộc đời",
+          "url": "https://www.tiktok.com/@trietlycuocdoi"
+        },
+        {
+          "id": "l_1776700783444",
+          "name": "Chu Lam radio",
+          "url": "https://www.tiktok.com/@chulamradio"
+        },
+        {
+          "id": "l_1776700794257",
+          "name": "Triết học đường phố",
+          "url": "https://www.tiktok.com/@triethocduongpho2"
+        },
+        {
+          "id": "l_1776700805853",
+          "name": "Triết lý đàn ông",
+          "url": "https://www.tiktok.com/@trietlydanongg69"
+        },
+        {
+          "id": "l_1776700817230",
+          "name": "Mẹo",
+          "url": "https://www.tiktok.com/@meodanhchoban"
+        },
+        {
+          "id": "l_1776700827800",
+          "name": "Mẹo vặt",
+          "url": "https://www.tiktok.com/@sieumeovat"
+        }
+      ],
+      "color": "#404040"
+    },
+    {
+      "id": "f_1777305509460",
+      "name": "Chữ Nôm",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777305601669",
+          "name": "Nôm Thi viện",
+          "url": "https://hvdic.thivien.net/"
+        },
+        {
+          "id": "l_1777305586001",
+          "name": "Nôm Lookup",
+          "url": "https://www.nomfoundation.org/nom-tools/Nom-Lookup-Tool?uiLang=vn"
+        },
+        {
+          "id": "l_1777305568789",
+          "name": "Digitizing VN",
+          "url": "https://www.digitizingvietnam.com/vi/tools/han-nom-dictionaries/general"
+        },
+        {
+          "id": "l_1777305539791",
+          "name": "Chữ Nôm",
+          "url": "https://chunom.net/Tu-dien-Han-Nom"
+        }
+      ],
+      "color": "#1e1e1e"
+    },
+    {
+      "id": "f_1777305812837",
+      "name": "Youtuber Du lịch Khám phá",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777350596601",
+          "name": "Hue Review",
+          "url": "https://www.youtube.com/@Huereview/videos"
+        },
+        {
+          "id": "l_1777310356131",
+          "name": "CHAO VLOG",
+          "url": "https://www.youtube.com/@CHAOVLOG91/videos"
+        },
+        {
+          "id": "l_1777309049719",
+          "name": "BLV Hải Thanh Story",
+          "url": "https://www.youtube.com/@BLVH%E1%BA%A3iThanhStory/videos"
+        },
+        {
+          "id": "l_1777308926610",
+          "name": "BLV Hải Thanh Podcast",
+          "url": "https://www.youtube.com/@BLVH%E1%BA%A3iThanh_Podcast/videos"
+        },
+        {
+          "id": "l_1777308847799",
+          "name": "Nếm TV",
+          "url": "https://www.youtube.com/@NEMTVVN/videos"
+        },
+        {
+          "id": "l_1777308395783",
+          "name": "THIÊN HÀ TV",
+          "url": "https://www.youtube.com/@ThienHaTV999/videos"
+        },
+        {
+          "id": "l_1777306454815",
+          "name": "Địa Lý - 5 PHÚT THÔI",
+          "url": "https://www.youtube.com/@nhungvandedialy/videos"
+        },
+        {
+          "id": "l_1777307998597",
+          "name": "Sử Ký Kiến Thức",
+          "url": "https://www.youtube.com/@SuKyKienThuc/videos"
+        },
+        {
+          "id": "l_1777307738243",
+          "name": "BLV Hải Thanh Plus",
+          "url": "https://www.youtube.com/@blvhaithanh_plus/videos"
+        },
+        {
+          "id": "l_1777307410330",
+          "name": "Joe HaTTab 20,2 Tr",
+          "url": "https://www.youtube.com/@JoeHattab/videos"
+        },
+        {
+          "id": "l_1777306247304",
+          "name": "Khoa Pug",
+          "url": "https://www.youtube.com/@KhoaPug_solotrip"
+        },
+        {
+          "id": "l_1777306214539",
+          "name": "Lê Khả Giáp",
+          "url": "https://www.youtube.com/@L%C3%AAKh%E1%BA%A3Gi%C3%A1p/videos"
+        },
+        {
+          "id": "l_1777306096630",
+          "name": "Tung tăng khắp miền",
+          "url": "https://www.youtube.com/@TungT%C4%83ngKh%E1%BA%AFpMi%E1%BB%81n/videos"
+        },
+        {
+          "id": "l_1777306045625",
+          "name": "Tung tăng TV",
+          "url": "https://www.youtube.com/c/TungTangTV/videos"
+        },
+        {
+          "id": "l_1777306014151",
+          "name": "Fahoka",
+          "url": "https://www.youtube.com/c/FAHOKAX%C3%AAD%E1%BB%8Bch/videos"
+        },
+        {
+          "id": "l_1777305977861",
+          "name": "Vũ Khắc Tiệp",
+          "url": "https://www.youtube.com/c/V%C5%A9Kh%E1%BA%AFcTi%E1%BB%87pOfficial/videos"
+        },
+        {
+          "id": "l_1777305960419",
+          "name": "Nhà to",
+          "url": "https://www.youtube.com/c/nhaTOOfficial7337"
+        }
+      ],
+      "color": "#d10000"
+    },
+    {
+      "id": "f_1777306322098",
+      "name": "Youtube Kiến thức Khoa học",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777311303528",
+          "name": "Câu Chuyện Quốc Tế",
+          "url": "https://www.youtube.com/c/C%C3%A2uChuy%E1%BB%87nQu%E1%BB%91cT%E1%BA%BF/videos"
+        },
+        {
+          "id": "l_1777311271670",
+          "name": "Soi Sáng",
+          "url": "https://www.youtube.com/channel/UChQtq0f3T1peK2w4olNyWYw/videos"
+        },
+        {
+          "id": "l_1777311224201",
+          "name": "Hiểu Biết Hơn Mỗi Ngày",
+          "url": "https://www.youtube.com/channel/UCW0GGjRL0zDhTLg18iHstng/videos"
+        },
+        {
+          "id": "l_1777308686426",
+          "name": "BATTLECRY - TIN HAY KHÔNG",
+          "url": "https://www.youtube.com/@battlecry.tinhaykhong/videos"
+        },
+        {
+          "id": "l_1777308633865",
+          "name": "BATTLECRY - NGƯỜI KỂ SỬ",
+          "url": "https://www.youtube.com/@BATTLECRY2020/videos"
+        },
+        {
+          "id": "l_1777308603453",
+          "name": "BATTLECRY - GÓC NHÌN",
+          "url": "https://www.youtube.com/@battlecry.gocnhin/videos"
+        },
+        {
+          "id": "l_1777308563463",
+          "name": "BATTLECRY - HÀNH TRÌNH",
+          "url": "https://www.youtube.com/@battlecry.hanhtrinh/videos"
+        },
+        {
+          "id": "l_1777308526849",
+          "name": "BATTLECRY - LỊCH SỬ THẾ GIỚI",
+          "url": "https://www.youtube.com/@BATTLECRY-L%E1%BB%8ACHS%E1%BB%ACTH%E1%BA%BEGI%E1%BB%9AI/videos"
+        },
+        {
+          "id": "l_1777308505276",
+          "name": "BATTLECRY - KHÁM PHÁ",
+          "url": "https://www.youtube.com/@battlecry.khampha/videos"
+        },
+        {
+          "id": "l_1777308475424",
+          "name": "Thư Viện Thiên Văn",
+          "url": "https://www.youtube.com/@ThuVienThienVan/videos"
+        },
+        {
+          "id": "l_1777308308677",
+          "name": "PSMH",
+          "url": "https://www.youtube.com/@PSMH1437/videos"
+        },
+        {
+          "id": "l_1777308166083",
+          "name": "Người Nổi Tiếng",
+          "url": "https://www.youtube.com/@nguoinoitieng1991/videos"
+        },
+        {
+          "id": "l_1777308139411",
+          "name": "Người Thành Công",
+          "url": "https://www.youtube.com/@nguoithanhcong1991/videos"
+        },
+        {
+          "id": "l_1777307672891",
+          "name": "CD Media - Khám Phá",
+          "url": "https://www.youtube.com/@CDMediaKhamPha/videos"
+        },
+        {
+          "id": "l_1777307537283",
+          "name": "Sam Eckholm",
+          "url": "https://www.youtube.com/@SamEckholm"
+        },
+        {
+          "id": "l_1777307212000",
+          "name": "Tùng Tùng Soong",
+          "url": "https://www.youtube.com/@tungtungsoong/videos"
+        },
+        {
+          "id": "l_1777306797296",
+          "name": "Spiderum",
+          "url": "https://www.youtube.com/@Spiderum/videos"
+        },
+        {
+          "id": "l_1777306766770",
+          "name": "JhGo Channel",
+          "url": "https://www.youtube.com/@JhGochannel/videos"
+        },
+        {
+          "id": "l_1777306727966",
+          "name": "Thế Giới Cổ Đại",
+          "url": "https://www.youtube.com/@TheGioiCoDai/videos"
+        },
+        {
+          "id": "l_1777306703834",
+          "name": "Diễn Giả PHAN ĐĂNG",
+          "url": "https://www.youtube.com/@diengiaphandang/videos"
+        },
+        {
+          "id": "l_1777306603948",
+          "name": "VKQS Team",
+          "url": "https://www.youtube.com/@VKQSTeam/videos"
+        },
+        {
+          "id": "l_1777306578885",
+          "name": "VFacts",
+          "url": "https://www.youtube.com/@VFacts/videos"
+        },
+        {
+          "id": "l_1777306486090",
+          "name": "Kiến thức thú vị",
+          "url": "https://www.youtube.com/@KI%E1%BA%BENTH%E1%BB%A8CTH%C3%9AV%E1%BB%8AOfficial-i8e/videos"
+        },
+        {
+          "id": "l_1777306420587",
+          "name": "Bác sĩ Trần Văn Phúc",
+          "url": "https://www.youtube.com/@BacsiTranVanPhucOfficial/videos"
+        },
+        {
+          "id": "l_1777306374469",
+          "name": "Dương Quốc Chính TV",
+          "url": "https://www.youtube.com/@duongquocchinhTV/videos"
+        }
+      ],
+      "color": "#c80000"
+    },
+    {
+      "id": "f_1777307022811",
+      "name": "Youtube Công nghệ",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777308354304",
+          "name": "Công Nghệ Pro",
+          "url": "https://www.youtube.com/@congnghe_pro"
+        },
+        {
+          "id": "l_1777308235653",
+          "name": "Vua Mẹo Vặt",
+          "url": "https://www.youtube.com/@Vuameovat/videos"
+        },
+        {
+          "id": "l_1777307149708",
+          "name": "Tinh tế",
+          "url": "https://www.youtube.com/@tinhte/videos"
+        },
+        {
+          "id": "l_1777307125964",
+          "name": "Vật Vờ Studio",
+          "url": "https://www.youtube.com/@realvatvostudio"
+        },
+        {
+          "id": "l_1777307104774",
+          "name": "Duy Luân",
+          "url": "https://www.youtube.com/@duyluandethuong/videos"
+        },
+        {
+          "id": "l_1777307080222",
+          "name": "ThinkView",
+          "url": "https://www.youtube.com/@thinkview/videos"
+        }
+      ],
+      "color": "#c80000"
+    },
+    {
+      "id": "f_1777346717117",
+      "name": "Youtube Sử Địa",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777350490697",
+          "name": "CDTeam - Sử Đồ",
+          "url": "https://www.youtube.com/@CDTeam-S%E1%BB%AD%C4%90%E1%BB%93/videos"
+        },
+        {
+          "id": "l_1777350387584",
+          "name": "Tóm Tắt Nhanh VN",
+          "url": "https://www.youtube.com/@tomtatnhanhvn/videos"
+        },
+        {
+          "id": "l_1777347260079",
+          "name": "HỒI KÝ THẾ KỶ",
+          "url": "https://www.youtube.com/@hoikytheky/videos"
+        },
+        {
+          "id": "l_1777347117137",
+          "name": "Sử Ký Kiến Thức",
+          "url": "https://www.youtube.com/@SuKyKienThuc/videos"
+        },
+        {
+          "id": "l_1777309805081",
+          "name": "Ngẫm Lại Sử",
+          "url": "https://www.youtube.com/@ngamlaisu/videos"
+        },
+        {
+          "id": "l_1777308283918",
+          "name": "Dương Địa Lý",
+          "url": "https://www.youtube.com/@DuongDiaLy/videos"
+        },
+        {
+          "id": "l_1777306942470",
+          "name": "Á Lục Ký",
+          "url": "https://www.youtube.com/@%C3%81L%E1%BB%A5cK%C3%BD2025"
+        },
+        {
+          "id": "l_1777346649761",
+          "name": "Không Giới Hạn",
+          "url": "https://www.youtube.com/@Kh%C3%B4ngGi%E1%BB%9BiH%E1%BA%A1n1242/videos"
+        },
+        {
+          "id": "l_1777306969869",
+          "name": "THEO DẤU GIÀY SÔ",
+          "url": "https://www.youtube.com/@theodaugiayso/videos"
+        },
+        {
+          "id": "l_1777308056129",
+          "name": "Ký Sự Ảnh Xưa",
+          "url": "https://www.youtube.com/@K%C3%BDS%E1%BB%B1%E1%BA%A2nhX%C6%B0a/videos"
+        },
+        {
+          "id": "l_1777307707824",
+          "name": "Hà Nội Phố",
+          "url": "https://www.youtube.com/@duyhanoipho/videos"
+        },
+        {
+          "id": "l_1777306632007",
+          "name": "GHIỀN ĐỊA LÝ",
+          "url": "https://www.youtube.com/@GHI%E1%BB%80N%C4%90%E1%BB%8AAL%C3%9D/videos"
+        },
+        {
+          "id": "l_1777306845354",
+          "name": "Cổ Sử",
+          "url": "https://www.youtube.com/@C%E1%BB%95_S%E1%BB%AD_1000/videos"
+        },
+        {
+          "id": "l_1777307608315",
+          "name": "World at War",
+          "url": "https://www.youtube.com/@worldatwar/videos"
+        },
+        {
+          "id": "l_1777306539981",
+          "name": "Việt Sử Ký Sự",
+          "url": "https://www.youtube.com/@vietsukysu.daiviet"
+        }
+      ],
+      "color": "#c80000"
+    },
+    {
+      "id": "f_1777307804567",
+      "name": "Youtube Đạo Đời",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777350291263",
+          "name": "Cổ Đạo Minh Triết",
+          "url": "https://www.youtube.com/@codaominhtriet1/videos"
+        },
+        {
+          "id": "l_1777349899215",
+          "name": "Kiến Thức Nhân Loại",
+          "url": "https://www.youtube.com/@KienThucNhanLoaiVN/videos"
+        },
+        {
+          "id": "l_1777349842744",
+          "name": "Cổ Nhân Dạy Đời - Radio",
+          "url": "https://www.youtube.com/@C%E1%BB%95Nh%C3%A2nD%E1%BA%A1y%C4%90%E1%BB%9Di-Radio/videos"
+        },
+        {
+          "id": "l_1777349438905",
+          "name": "Ngọn Đèn Tri Thức",
+          "url": "https://www.youtube.com/@ngondentrithuc/videos"
+        },
+        {
+          "id": "l_1777347193828",
+          "name": "Minh Triết Bát Nhã",
+          "url": "https://www.youtube.com/@minhtrietbatnha/videos"
+        },
+        {
+          "id": "l_1777347166658",
+          "name": "Radio Suy Ngẫm",
+          "url": "https://www.youtube.com/@radiosuyngam/videos"
+        },
+        {
+          "id": "l_1777310968223",
+          "name": "Vietcetera",
+          "url": "https://www.youtube.com/@Vietcetera/videos"
+        },
+        {
+          "id": "l_1777310892757",
+          "name": "THIỀN ĐẠO",
+          "url": "https://www.youtube.com/@THIENDAO/videos"
+        },
+        {
+          "id": "l_1777307942358",
+          "name": "Cấy Nền Radio",
+          "url": "https://www.youtube.com/@CayNenRadio/videos"
+        },
+        {
+          "id": "l_1777307825433",
+          "name": "Tân Phú Khánh Official",
+          "url": "https://www.youtube.com/@trituenhansinh/videos"
+        }
+      ],
+      "color": "#c80000"
+    },
+    {
+      "id": "f_1777308741321",
+      "name": "Youtube Ca nhạc",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777349768057",
+          "name": "GIAI THOẠI SHOWBIZ",
+          "url": "https://www.youtube.com/@GIAITHO%E1%BA%A0ISHOWBIZ/videos"
+        },
+        {
+          "id": "l_1777348028003",
+          "name": "Lululola Show",
+          "url": "https://www.youtube.com/@LululolaShow/videos"
+        },
+        {
+          "id": "l_1777311090344",
+          "name": "Góc Nhạc Vàng",
+          "url": "https://www.youtube.com/@gocnhacvangxua/videos"
+        },
+        {
+          "id": "l_1777310769872",
+          "name": "Đen Vâu",
+          "url": "https://www.youtube.com/channel/UCWu91J5KWEj1bQhCBuGeJxw"
+        },
+        {
+          "id": "l_1777310730409",
+          "name": "Siêu Thị Nhạc Xưa",
+          "url": "https://www.youtube.com/@sieuthinhacxua/videos"
+        },
+        {
+          "id": "l_1777310711382",
+          "name": "Quê Hương Việt Nam",
+          "url": "https://www.youtube.com/@quehuong.vietnam/videos"
+        },
+        {
+          "id": "l_1777310660591",
+          "name": "Nhạc Trịnh Công Sơn",
+          "url": "https://www.youtube.com/@nhactrinhcongson726/videos"
+        },
+        {
+          "id": "l_1777310282706",
+          "name": "Quang Lập Official",
+          "url": "https://www.youtube.com/@QuangLapOfficial/videos"
+        },
+        {
+          "id": "l_1777310205723",
+          "name": "NHẠC XƯA HẢI NGOẠI",
+          "url": "https://www.youtube.com/@nhacxuahaingoai"
+        },
+        {
+          "id": "l_1777310082063",
+          "name": "Nhạc Hải Ngoại Bất Hủ",
+          "url": "https://www.youtube.com/@nhachaingoaibathu/videos"
+        },
+        {
+          "id": "l_1777309943549",
+          "name": "Radio Nhạc Xưa",
+          "url": "https://www.youtube.com/@radionhacxua/videos"
+        },
+        {
+          "id": "l_1777309924737",
+          "name": "Kho Nhạc Hay Tuyển Chọn",
+          "url": "https://www.youtube.com/@khonhachaytuyenchon/videos"
+        },
+        {
+          "id": "l_1777309661242",
+          "name": "Liên Khúc Nhạc Việt",
+          "url": "https://www.youtube.com/@lienkhucnhacviet86/videos"
+        },
+        {
+          "id": "l_1777309591515",
+          "name": "Phòng Trà Không Tên",
+          "url": "https://www.youtube.com/@PhongTraKhongTenShow/playlists"
+        },
+        {
+          "id": "l_1777309500342",
+          "name": "THE KHANG SHOW",
+          "url": "https://www.youtube.com/@TheKhangShow/videos"
+        },
+        {
+          "id": "l_1777309447938",
+          "name": "Phương Phương Thảo Official",
+          "url": "https://www.youtube.com/@phuongphuongthaoofficial/videos"
+        },
+        {
+          "id": "l_1777309422792",
+          "name": "Mây Lang Thang Music",
+          "url": "https://www.youtube.com/@MayLangThangMusic/videos"
+        },
+        {
+          "id": "l_1777309175436",
+          "name": "Asia",
+          "url": "https://www.youtube.com/user/TrungTamAsiaChannel"
+        },
+        {
+          "id": "l_1777309145748",
+          "name": "Giọng Ca Để Đời",
+          "url": "https://www.youtube.com/@GiongCaDeDoi/videos"
+        },
+        {
+          "id": "l_1777309120312",
+          "name": "Thuy Nga",
+          "url": "https://www.youtube.com/@thuynga/videos"
+        }
+      ],
+      "color": "#c80000"
+    },
+    {
+      "id": "f_1777350192415",
+      "name": "Youtube Kinh tế",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777350207048",
+          "name": "Bẻ Khóa Tư Duy",
+          "url": "https://www.youtube.com/@bekhoatuduy/videos"
+        }
+      ],
+      "color": "#c80000"
+    },
+    {
+      "id": "f_1777350837126",
+      "name": "Youtube Dời sống",
+      "isCollapsed": true,
+      "links": [
+        {
+          "id": "l_1777353029006",
+          "name": "Ton Ton in France | Nước Pháp Có Gì Hay?",
+          "url": "https://www.youtube.com/@tontoninfrance-nuocphapcogihay/videos"
+        },
+        {
+          "id": "l_1777352987560",
+          "name": "Hoa và Alex - Cuộc sống Pháp",
+          "url": "https://www.youtube.com/@HoaAlexCuocsongPhap/videos"
+        },
+        {
+          "id": "l_1777352973948",
+          "name": "WONDERFUL FRANCE",
+          "url": "https://www.youtube.com/@WONDERFULFRANCE/videos"
+        },
+        {
+          "id": "l_1777352955436",
+          "name": "Mai Lê Family Cuộc Sống Ở Pháp",
+          "url": "https://www.youtube.com/@mailefamilycuocsongophap/videos"
+        },
+        {
+          "id": "l_1777352743854",
+          "name": "BÌNH ĐIÊN NẶNG",
+          "url": "https://www.youtube.com/@BINH-DIEN-NANG"
+        },
+        {
+          "id": "l_1777352730898",
+          "name": "1001 Mẹo Vặt",
+          "url": "https://www.youtube.com/@1001M%E1%BA%B9oV%E1%BA%B7t/videos"
+        },
+        {
+          "id": "l_1777352717219",
+          "name": "MẸO",
+          "url": "https://www.youtube.com/@meodanhchoban/videos"
+        },
+        {
+          "id": "l_1777352692755",
+          "name": "Mẹo nhỏ thú vị",
+          "url": "https://www.youtube.com/@meonhothuvi/videos"
+        },
+        {
+          "id": "l_1777352606241",
+          "name": "4Mi Vlogs | Vi vu Nhật Bản",
+          "url": "https://www.youtube.com/@4mivlogs/videos"
+        },
+        {
+          "id": "l_1777352567775",
+          "name": "MoMo - Cuộc Sống Nhật Bản",
+          "url": "https://www.youtube.com/@momocuocsongnhatban/videos"
+        },
+        {
+          "id": "l_1777352545347",
+          "name": "Duc Anh JP & Family - Khám Phá Nhật Bản",
+          "url": "https://www.youtube.com/@ducanhjpfamily/videos"
+        },
+        {
+          "id": "l_1777352528026",
+          "name": "Trần Tiên Family Cuộc Sống Nhật",
+          "url": "https://www.youtube.com/@trantienfamily/videos"
+        },
+        {
+          "id": "l_1777352496431",
+          "name": "Út-Cuộc Sống Ở Nhật",
+          "url": "https://www.youtube.com/@kenhcuaut9999/videos"
+        },
+        {
+          "id": "l_1777352152342",
+          "name": "Hai Melbourne",
+          "url": "https://www.youtube.com/@Melbournetoday/videos"
+        },
+        {
+          "id": "l_1777352060996",
+          "name": "Chau Riches - Cuộc sống Úc 🇦🇺",
+          "url": "https://www.youtube.com/@ChauRiches-Cu%E1%BB%99cs%E1%BB%91ng%C3%9Ac/videos"
+        },
+        {
+          "id": "l_1777352003702",
+          "name": "Hồ Qanh trà Xanh Cuộc sống Trung Quốc",
+          "url": "https://www.youtube.com/@hoqanhtraxanhcuocsongtrungquoc/videos"
+        },
+        {
+          "id": "l_1777351986707",
+          "name": "Thao Miền Tây Family China",
+          "url": "https://www.youtube.com/@ThaoMi%E1%BB%81nT%C3%A2yFamilyChina/videos"
+        },
+        {
+          "id": "l_1777351966782",
+          "name": "Phương China Vlog",
+          "url": "https://www.youtube.com/@phuongchinavlog/videos"
+        },
+        {
+          "id": "l_1777351952365",
+          "name": "The Ulengovs",
+          "url": "https://www.youtube.com/@TheUlengovs/videos"
+        },
+        {
+          "id": "l_1777351932830",
+          "name": "Vương Linh Vlog",
+          "url": "https://www.youtube.com/@vuonglinhvlog/videos"
+        },
+        {
+          "id": "l_1777351912217",
+          "name": "Hạ Vy 小夏",
+          "url": "https://www.youtube.com/@HaVydulichTrungQuoc/videos"
+        },
+        {
+          "id": "l_1777351899080",
+          "name": "Vương Khang",
+          "url": "https://www.youtube.com/@hoamaifood5871/videos"
+        },
+        {
+          "id": "l_1777351884626",
+          "name": "Thuý Duy Family Cuộc Sống Trung Quốc !!",
+          "url": "https://www.youtube.com/@ThuyDuy1997/videos"
+        },
+        {
+          "id": "l_1777351868033",
+          "name": "Tiểu Hồ - Cuộc Sống Trung Quốc",
+          "url": "https://www.youtube.com/@Xiaohu-CuocSongTrungQuoc/videos"
+        },
+        {
+          "id": "l_1777351753851",
+          "name": "Quách Thảo - CUỘC SỐNG TẠI NGA",
+          "url": "https://www.youtube.com/@QuachThao-CUOCSONGTAINGA/videos"
+        },
+        {
+          "id": "l_1777351701927",
+          "name": "Cuộc sống nước Nga",
+          "url": "https://www.youtube.com/@CuocsongnuocNga/videos"
+        },
+        {
+          "id": "l_1777351575257",
+          "name": "Coleen _ Cuoc Song London",
+          "url": "https://www.youtube.com/@coleen_cuocsonglondon5052/videos"
+        },
+        {
+          "id": "l_1777351462745",
+          "name": "Ống kính nước Đức 🇩🇪",
+          "url": "https://www.youtube.com/@ongkinhnuocduc/videos"
+        },
+        {
+          "id": "l_1777351317274",
+          "name": "Hi Kelly",
+          "url": "https://www.youtube.com/@hikellysg/videos"
+        },
+        {
+          "id": "l_1777351284038",
+          "name": "Tony Tran USA",
+          "url": "https://www.youtube.com/@TonyTranVA/videos"
+        },
+        {
+          "id": "l_1777351250770",
+          "name": "KC Cuộc Sống Mỹ",
+          "url": "https://www.youtube.com/@kccuocsongmy/videos"
+        },
+        {
+          "id": "l_1777351200018",
+          "name": "Nhung Dang & Family Cuộc Sống HOA KỲ",
+          "url": "https://www.youtube.com/@NhungDangCC/videos"
+        },
+        {
+          "id": "l_1777351161523",
+          "name": "Hoyer Family Cuộc Sống Mỹ",
+          "url": "https://www.youtube.com/@HoyerFamilyCuocSongMy/videos"
+        },
+        {
+          "id": "l_1777351122862",
+          "name": "Bùi Hồ RCC",
+          "url": "https://www.youtube.com/@B%C3%B9iH%E1%BB%93RCC/videos"
+        },
+        {
+          "id": "l_1777351033203",
+          "name": "Độc Lạ Bình Dương",
+          "url": "https://www.youtube.com/@doclabinhduong.official/videos"
+        },
+        {
+          "id": "l_1777350946365",
+          "name": "Top Thú vị",
+          "url": "https://www.youtube.com/@topthuvi/videos"
+        },
+        {
+          "id": "l_1777350898633",
+          "name": "Độc Lạ Sài Gòn",
+          "url": "https://www.youtube.com/@chinhdoclasaigon/videos"
+        },
+        {
+          "id": "l_1777306171049",
+          "name": "MẸO VẶT TV",
+          "url": "https://www.youtube.com/@M%E1%BA%B8OV%E1%BA%B6TTV-w5n/videos"
+        },
+        {
+          "id": "l_1777350859463",
+          "name": "Bước Chân Miền Tây",
+          "url": "https://www.youtube.com/@buocchanmientay/videos"
+        }
+      ],
+      "color": "#c80000"
+    }
+  ],
+  "currentFontSize": 18
+}
